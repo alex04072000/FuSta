@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Neural Re-rendering for Full-frame Video Stabilization - Supplementary Material</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+	<link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<br>
+				<h1>Neural Re-rendering for Full-frame Video Stabilization</h1>
+				<br>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<a href="../../../index.html">
+					<button type="button" class="btn btn-link">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
+					</button>
+				</a>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Ablation study</h3>
+				<hr>
+				
+				<h4>Residual detail transfer</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/11_residual_detail_transfer_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without residual detail transfer</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with residual detail transfer</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/18_residual_detail_transfer_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without residual detail transfer</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with residual detail transfer</center></strong></h5>
+				  </div>
+				</div>
+				
+				<h4>Fusion space</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/3_ablation.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/5_ablation.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+			
+				<h3>FoV expansion</h3>
+				<hr>
+				
+				<h4>Zooming</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/Zooming_6_FOV_bf_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Input unstable video</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours + FoV expansion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<h4>Parallax</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/Parallax_0_FOV_bf_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Input unstable video</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours + FoV expansion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<h4>Quick rotation</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/QuickRotation_3_FOV_bf_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Input unstable video</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours + FoV expansion</center></strong></h5>
+				  </div>
+				</div>
+				
+			</div>	
+			
+			<div class="col-xs-12 text-left">
+				<h3>Blurry frames removal</h3>
+				<hr>
+				
+				<h4>Regular</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/21_frame_selection_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without blurry frames removal</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with blurry frames removal</center></strong></h5>
+				  </div>
+				</div>
+				
+				<h4>Running</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/9_frame_selection_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without blurry frames removal</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with blurry frames removal</center></strong></h5>
+				  </div>
+				</div>
+				
+			</div>	
+			
+			<div class="col-xs-12 text-left">
+				<h3>Comparisons with video completion</h3>
+				<hr>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/0_video_completion_sode_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/1_video_completion_sode_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/3_video_completion_sode_by_side_.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				
+			</div>	
+			
+			<br>
+			<br>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
