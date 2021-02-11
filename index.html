@@ -11,6 +11,7 @@
   <link href="website/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="website/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="website/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="website/css/flexslider.css" type="text/css" media="screen" />
 
   <!--<meta property="og:image" content="http://gph.is/2oZQz8h" />-->
 </head>
@@ -96,21 +97,124 @@
 
     </div>
   </div>
+  
+  <div class="flexslider">
+	  <ul class="slides">
+			<li data-thumb="website\slideshow\Regular_17.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Regular_17.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Regular_18.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Regular_18.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\QuickRotation_6.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\QuickRotation_6.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\QuickRotation_15.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\QuickRotation_15.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Zooming_9.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Zooming_9.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Zooming_4.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Zooming_4.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Parallax_0.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Parallax_0.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<!-- <li data-thumb="website\slideshow\Parallax_17.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Parallax_17.mp4" type="video/mp4">
+			  </video>
+			</li> -->
+			<li data-thumb="website\slideshow\Crowd_13.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Crowd_13.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Crowd_21.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Crowd_21.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Running_5.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Running_5.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Running_2.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Running_2.mp4" type="video/mp4">
+			  </video>
+			</li>
+			
+			<li data-thumb="website\slideshow\Selfie_30.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Selfie_30.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Selfie_7.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Selfie_7.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Selfie_11.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Selfie_11.mp4" type="video/mp4">
+			  </video>
+			</li>
+			<li data-thumb="website\slideshow\Selfie_18.jpg">
+			<video width="1000" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+				<source src="website\slideshow\Selfie_18.mp4" type="video/mp4">
+			  </video>
+			</li>
+	  </ul>
+
+  </div>
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+  <!-- FlexSlider -->
+  <script defer src="website/js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 
 
   <div class="container">
 
-    <div class="section">
-
-      <!--   Icon Section   -->
+    <!-- <div class="section">
       <div class="row center">
         <div class="col l12 m12 s12">
           <img class="responsive-img" src="website/representative_image.jpg">
         </div>
-        
       </div>
-
-    </div>
+    </div> -->
 
     <br>
 
@@ -159,7 +263,7 @@ Extensive experiment results demonstrate the merits of our approach over prior v
 
       <div class="subtitle">Bibtex</div>
       <pre>
-@inproceedings{Liu-CVPR-2020,
+@inproceedings{Liu-NeRViS-2021,
     author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin}, 
     title     = {Neural Re-rendering for Full-frame Video Stabilization}, 
     journal   = {arXiv preprint},
