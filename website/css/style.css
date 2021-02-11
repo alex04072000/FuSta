@@ -225,5 +225,5 @@ a:hover:not(.summary):hover{
 /* Loading
 ***********************/
 .loading #container {opacity: 0;}
-.loading:before  { content: 'LOADING'; display: block; margin: 100px 0 0; text-align: center; color: #fff; font-weight: bold; font-size: 600px; opacity: 0.3; }
+.loading:before  { content: 'LOADING'; display: block; margin: 100px 0 0; text-align: center; color: #111; font-weight: bold; font-size: 60px; opacity: 0.3; }
 body {width: 100%; float: left; opacity: 1; -webkit-transition: opacity 1s ease;}
