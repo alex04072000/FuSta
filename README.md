@@ -65,3 +65,8 @@ python run_NeRViS.py --load NeRViS_model/checkpoint/model_epoch050.pth --input_f
     year      = {2021}
 }
 ```
+
+## Acknowledgements
+
+Parts of the code were based on from [AdaCoF-pytorch](https://github.com/HyeongminLEE/AdaCoF-pytorch).
+Some functions are borrowed from [softmax-splatting](https://github.com/sniklaus/softmax-splatting), [RAFT](https://github.com/princeton-vl/RAFT), and [[Yu and Ramamoorthi 2020](http://jiyang.fun/projects.html)]
