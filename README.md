@@ -1,5 +1,5 @@
-# NeRViS
-# Neural Re-rendering for Full-frame Video Stabilization
+# NeRViS: Neural Re-rendering for Full-frame Video Stabilization
+### [Project Page](https://alex04072000.github.io/NeRViS/) | [Video](https://www.youtube.com/watch?v=KO3sULs4hso) | [Paper](https://arxiv.org/abs/2102.06205)
 
 ## Setup
 
