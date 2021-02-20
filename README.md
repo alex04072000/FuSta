@@ -37,6 +37,7 @@ pip install PyMaxflow
 Calculate smoothed flow using [Yu and Ramamoorthi 2020].
 ```
 conda activate NeRViS_CVPR2020
+cd CVPR2020CODE_yulunliu_modified
 python main.py [input_frames_path] [output_frames_path] [output_warping_field_path]
 ```
 e.g.
@@ -48,6 +49,7 @@ Run NeRViS video stabilization.
 ```
 conda deactivate
 conda activate NeRViS
+cd ..
 python run_NeRViS.py --load [model_checkpoint_path] --input_frames_path [input_frames_path] --warping_field_path [warping_field_path] --output_path [output_frames_path] --temporal_width [temporal_width] --temporal_step [temporal_step]
 ```
 e.g.
