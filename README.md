@@ -42,7 +42,7 @@ python main.py [input_frames_path] [output_frames_path] [output_warping_field_pa
 ```
 e.g.
 ```
-python main.py ../../NUS/Crowd/0/ NUS_results/Crowd/0 CVPR2020_warping_field/
+python main.py ../../NUS/Crowd/0/ NUS_results/Crowd/0/ CVPR2020_warping_field/
 ```
 
 Run NeRViS video stabilization.
