@@ -5,6 +5,7 @@
 
 Setup environment for [Yu and Ramamoorthi 2020].
 ```
+cd CVPR2020CODE_yulunliu_modified
 conda create --name NeRViS_CVPR2020 python=3.6
 conda activate NeRViS_CVPR2020
 pip install -r requirements_CVPR2020.txt
@@ -13,7 +14,6 @@ pip install -r requirements_CVPR2020.txt
 
 Download pre-trained checkpoints of [Yu and Ramamoorthi 2020].
 ```
-cd CVPR2020CODE_yulunliu_modified
 wget https://www.cmlab.csie.ntu.edu.tw/~yulunliu/NeRViS/CVPR2020_ckpts.zip
 unzip CVPR2020_ckpts.zip
 cd ..
