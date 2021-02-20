@@ -299,6 +299,18 @@ if __name__ == '__main__':
                 backward_flows.append(backward_flow)
                 input_frames.append(torch.FloatTensor(np.ascontiguousarray(cv2.imread(filename=ref_frame, flags=-1)[..., ::-1].transpose(2, 0, 1)[None, :, :, :].astype(np.float32) * (1.0 / 255.0))).cuda())
                 
+            if H % 4 == 0:
+                boundary_cropping_h = 4
+            else:
+                boundary_cropping_h = 3
+            if W % 4 == 0:
+                boundary_cropping_w = 4
+            else:
+                boundary_cropping_w = 3
+            input_frames = [x[:, :, boundary_cropping_h:-boundary_cropping_h, boundary_cropping_w:-boundary_cropping_w] for x in input_frames]
+            F_kprime_to_k = F_kprime_to_k[:, :, boundary_cropping_h:-boundary_cropping_h, boundary_cropping_w:-boundary_cropping_w]
+            forward_flows = [x[:, :, boundary_cropping_h:-boundary_cropping_h, boundary_cropping_w:-boundary_cropping_w] for x in forward_flows]
+            backward_flows = [x[:, :, boundary_cropping_h:-boundary_cropping_h, boundary_cropping_w:-boundary_cropping_w] for x in backward_flows]
                 
             frame_out = model(input_frames, F_kprime_to_k, forward_flows, backward_flows)
             """output_frames.append(frame_out.detach().cpu())"""
@@ -365,7 +377,9 @@ if __name__ == '__main__':
             loss.backward()
             optimizer.step()
         f.close()"""
-            
+        
+        WWW -= boundary_cropping_w
+        HHH -= boundary_cropping_h
             
         from maxflow.fastmin import aexpansion_grid
         accumulated_motion_vectors = np.zeros((original_length, 2), np.int32)
