@@ -388,7 +388,7 @@ if __name__ == '__main__':
             # data term / 2^3 level
             data_term = np.zeros((original_length, (2*maximum_movement+1) * (2*maximum_movement+1)))
             print('data term')
-            for iiii in range(original_length):
+            for iiii in range(len(large_mask_chain)):
                 print(iiii)
                 for uu in range(-maximum_movement, maximum_movement+1):
                     print(uu)
@@ -433,7 +433,7 @@ if __name__ == '__main__':
         np.savetxt("motion_vector.csv", accumulated_motion_vectors, delimiter=",")
         
         loss = 0.0
-        for iiii in range(original_length):
+        for iiii in range(len(large_mask_chain)):
             motion_vector_u = int(accumulated_motion_vectors[iiii, 0])
             motion_vector_v = int(accumulated_motion_vectors[iiii, 1])
             cropped_mask = large_mask_chain[iiii][:, :, HHH+motion_vector_u:-HHH+motion_vector_u, WWW+motion_vector_v:-WWW+motion_vector_v]
@@ -450,7 +450,7 @@ if __name__ == '__main__':
         
         # loss without adjustment
         loss = 0.0
-        for iiii in range(original_length):
+        for iiii in range(len(large_mask_chain)):
             cropped_mask = large_mask_chain[iiii][:, :, HHH:-HHH, WWW:-WWW]
             summed_mask = (torch.sum(1.0 - cropped_mask)).cpu().numpy()
             loss += summed_mask
