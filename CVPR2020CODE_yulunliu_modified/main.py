@@ -416,10 +416,6 @@ def compute_H(path):
                 im2_ori = cv2.resize(frame, (832, 448))
 
                 rr, tt, ss = rigid_transform_2D(im1_ori, im2_ori)
-                print('rrttss')
-                print(rr)
-                print(tt)
-                print(ss)
 
                 if np.isnan(np.min(rr)) or np.isnan(np.min(tt)) or np.isnan(np.min(ss)):
                     tx[i + 1] = tx[i]
@@ -586,7 +582,6 @@ with torch.no_grad():
 
         optic, video, mask, mask_object = compute_flow_seg(video, H, ite2 * (SEG - 1))
         MASK = np.ones((video.shape[0], 1, 448 + 2 * margin, 832 + 2 * margin))
-        print(MASK.shape)
 
         if ite2 > 0:
             optic[0, 0:2, :, :] = optic[0, 0:2, :, :] - lastwarp.cpu()
@@ -632,14 +627,11 @@ with torch.no_grad():
                         MAS = F.grid_sample(torch.from_numpy(mask[i + 1, :, :]).unsqueeze(0).unsqueeze(0).float().cuda(), grid_large + warp_acc[i, :, :, :].unsqueeze(0).permute(0, 2, 3, 1)).data.cpu()
                         if ite2 > 0:
                             result[i, :, :, :] = F.grid_sample(torch.from_numpy(np.transpose(video[i, :, :, :], (2, 0, 1))).unsqueeze(0).float().cuda(), grid_large + lastwarp.cuda().unsqueeze(0).permute(0, 2, 3, 1)).data.cpu().permute(0, 2, 3, 1)
-                            print('4: ' + str(i))
                             warping_fields[i, :, :, :] = warp_acc[i, :, :, :]
                         else:
                             result[i, :, :, :] = torch.from_numpy(video[i, :, :, :])
-                            print('3: ' + str(i))
                             warping_fields[i, :, :, :] = warp_acc[i, :, :, :]
                         result[i + 1, :, :, :] = newimages.permute(0, 2, 3, 1)
-                        print('2: ' + str(i+1))
                         MASK[i + 1, :, :, :] = MAS
 
                 elif i == video.shape[0] - nframe - 1:
@@ -652,7 +644,6 @@ with torch.no_grad():
                     if ITE1 == rou - 1:
                         print(video.shape)
                         newimages = np.transpose(video[i:i + nframe + 1, :, :, :], (0, 3, 1, 2))
-                        print(mask.shape)
                         newmasks = np.transpose((np.expand_dims(mask, -1))[i:i + nframe + 1, :, :, :], (0, 3, 1, 2))
                     for ite in range(0, nframe - 1):
 
@@ -687,7 +678,6 @@ with torch.no_grad():
                         # pdb.set_trace()
                         result[i + 1:i + nframe + 1, :, :, :] = torch.from_numpy(np.transpose(newimages[1:, :, :, :], (0, 2, 3, 1)))
                         MASK[i + 1:i + nframe + 1, :, :, :] = newmasks[1:, :, :, :]
-                        print('1: '+str(i))
                         warping_fields[i + 1:i + nframe + 1, :, :, :] = warp_acc[1, :, :, :]
                 else:
                     optic_temp = optic[i:i + nframe, :, :, :].cuda()
@@ -718,7 +708,6 @@ with torch.no_grad():
                         newmasks = F.grid_sample(torch.from_numpy(np.transpose(np.expand_dims(mask[i + 1, :, :], -1), (2, 0, 1))).unsqueeze(0).float().cuda(), grid_large + warp_acc[i, :, :, :].unsqueeze(0).permute(0, 2, 3, 1)).data.cpu()
 
                         warping_fields[i, :, :, :] = warp_acc[i, :, :, :]
-                        print('0: '+str(i))
                         H_invs[i, :, :] = H_inv[i + ite2 * (SEG - 1) - 1, :, :]
                         # category_name = sys.argv[1].split('/')[-2]
                         # sq_name = sys.argv[1].split('/')[-1][:-4]
@@ -753,8 +742,6 @@ with torch.no_grad():
         # warping_fields=warping_fields[:result.shape[0]-nframe-1,:,:,:]
         # H_invs=H_invs[:result.shape[0]-nframe-1,:,:]
         # warping_fields = warping_fields[2:]
-        for iii in range(H_invs.shape[0]):
-            print('hahaha: '+str(np.sum(H_invs[iii])))
 
         H_invs = H_invs[1:]
 
