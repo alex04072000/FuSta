@@ -6,7 +6,7 @@
 Setup environment for [Yu and Ramamoorthi 2020].
 ```
 cd CVPR2020CODE_yulunliu_modified
-conda create --name FuSta_CVPR2020 python=3.6 conda=4.8.3
+conda create --name FuSta_CVPR2020 python=3.6
 conda activate FuSta_CVPR2020
 pip install -r requirements_CVPR2020.txt
 ./install.sh
@@ -21,7 +21,7 @@ cd ..
 Setup environment for FuSta.
 ```
 conda deactivate
-conda create --name FuSta python=3.6 conda=4.8.3
+conda create --name FuSta python=3.6
 conda activate FuSta
 conda install pytorch=1.6.0 torchvision=0.7.0 cudatoolkit=10.1 -c pytorch
 conda install matplotlib
