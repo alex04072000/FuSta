@@ -47,6 +47,7 @@
 
       <h4 class="header center black-text">FuSta</h4>
 	  <h5 class="header center black-text">Hybrid Neural Fusion for Full-frame Video Stabilization</h5>
+	  <h6 class="header center black-text">ICCV 2021</h6>
 
       <br>
 
@@ -232,12 +233,7 @@
 
     <div class="row section scrollspy" id="abstract">
       <div class="title">Abstract</div>
-Existing video stabilization methods either require aggressive cropping of frame boundaries or generate distortion artifacts on the stabilized frames.
-In this work, we present an algorithm for full-frame video stabilization by first estimating dense warp fields. 
-Full-frame stabilized frames can then be synthesized by fusing warped contents from neighboring frames. 
-The core technical novelty lies in our learning-based hybrid-space fusion that alleviates artifacts caused by optical flow inaccuracy and fast-moving objects. 
-We validate the effectiveness of our method on the NUS and selfie video datasets.
-Extensive experiment results demonstrate the merits of our approach over prior video stabilization methods.
+Existing video stabilization methods often generate visible distortion or require aggressive cropping of frame boundaries, resulting in smaller field of views. In this work, we present a frame synthesis algorithm to achieve full-frame video stabilization. We first estimate dense warp fields from neighboring frames and then synthesize the stabilized frame by fusing the warped contents. Our core technical novelty lies in the learning-based hybrid-space fusion that alleviates artifacts caused by optical flow inaccuracy and fast-moving objects. We validate the effectiveness of our method on the NUS, selfie, and DeepStab video datasets. Extensive experiment results demonstrate the merits of our approach over prior video stabilization methods.
     </div>
 
     
@@ -269,16 +265,16 @@ Extensive experiment results demonstrate the merits of our approach over prior v
 
     <div class="row">
       <div class="subtitle">Citation</div>
-      <p>Yu-Lun Liu, Wei-Sheng Lai, Ming-Hsuan Yang, Yung-Yu Chuang, and Jia-Bin Huang, "Neural Re-rendering for Full-frame Video Stabilization", arXiv, 2020</p>
+      <p>Yu-Lun Liu, Wei-Sheng Lai, Ming-Hsuan Yang, Yung-Yu Chuang, and Jia-Bin Huang, "Neural Re-rendering for Full-frame Video Stabilization", ICCV, 2021</p>
 
       <br>
 
       <div class="subtitle">Bibtex</div>
       <pre>
 @inproceedings{Liu-FuSta-2021,
-    author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin}, 
     title     = {Hybrid Neural Fusion for Full-frame Video Stabilization}, 
-    journal   = {arXiv preprint},
+    author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin}, 
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision}, 
     year      = {2021}
 }
 </pre>
