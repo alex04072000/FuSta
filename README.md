@@ -1,5 +1,9 @@
-# FuSta: Hybrid Neural Fusion for Full-frame Video Stabilization
+# [ICCV 2020] FuSta: Hybrid Neural Fusion for Full-frame Video Stabilization
 ### [Project Page](https://alex04072000.github.io/FuSta/) | [Video](https://www.youtube.com/watch?v=KO3sULs4hso) | [Paper](https://arxiv.org/abs/2102.06205) | [Google Colab](https://colab.research.google.com/drive/1l-fUzyM38KJMZyKMBWw_vu7ZUyDwgdYH?usp=sharing)
+
+<img src='./teaser.png' width=1000>
+
+Existing video stabilization methods often generate visible distortion or require aggressive cropping of frame boundaries, resulting in smaller field of views. In this work, we present a frame synthesis algorithm to achieve full-frame video stabilization. We first estimate dense warp fields from neighboring frames and then synthesize the stabilized frame by fusing the warped contents. Our core technical novelty lies in the learning-based hybrid-space fusion that alleviates artifacts caused by optical flow inaccuracy and fast-moving objects. We validate the effectiveness of our method on the NUS, selfie, and DeepStab video datasets. Extensive experiment results demonstrate the merits of our approach over prior video stabilization methods.
 
 ## Setup
 
@@ -61,9 +65,9 @@ python run_FuSta.py --load NeRViS_model/checkpoint/model_epoch050.pth --input_fr
 
 ```
 @inproceedings{Liu-FuSta-2021,
-    author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin}, 
     title     = {Hybrid Neural Fusion for Full-frame Video Stabilization}, 
-    journal   = {arXiv preprint},
+    author    = {Liu, Yu-Lun and Lai, Wei-Sheng and Yang, Ming-Hsuan and Chuang, Yung-Yu and Huang, Jia-Bin}, 
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision}, 
     year      = {2021}
 }
 ```
