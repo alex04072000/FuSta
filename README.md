@@ -61,6 +61,14 @@ e.g.
 python run_FuSta.py --load NeRViS_model/checkpoint/model_epoch050.pth --input_frames_path ../NUS/Crowd/0/ --warping_field_path CVPR2020CODE_yulunliu_modified/CVPR2020_warping_field/ --output_path output/ --temporal_width 41 --temporal_step 4
 ```
 
+## Evaluation metrics
+
+Please refer to `metrics.py` for the calculation of metrics C/D/S and `metrics_A.py` for metric A. 
+The implementation of `metrics.py` is modified from [DIFRINT](https://github.com/jinsc37/DIFRINT/blob/master/metrics.py) with the help of [Stefan Klut](https://github.com/stefanklut).
+Also, note that the calculation of metrics C/D/S might fail and result in Nan or numbers larger than 1.0 evaluating some compared stabilization methods.
+This is due to the lack of feature points or the failure of homography estimation.
+We only average the scores of the video sequences that all compared methods successfully pass the metric calculations.
+
 ## Citation
 
 ```
