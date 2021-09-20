@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Hybrid Neural Fusion for Full-frame Video Stabilization - Supplementary Material</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+	<link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<br>
+				<h1>Hybrid Neural Fusion for Full-frame Video Stabilization</h1>
+				<br>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<a href="../main.html">
+					<button type="button" class="btn btn-link">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
+					</button>
+				</a>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col-xs-12 text-left">
+				<h3>Video comparisons to the video completion method [Gao et al. 2020]</h3>
+				<hr>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/video_completion/1_video_completion_sode_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/video_completion/Running_3_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/video_completion/Running_0_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/video_completion/Running_1_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/video_completion/Running_2_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours</center></strong></h5>
+				  </div>
+				</div>
+				
+			</div>	
+			
+			<br>
+			<br>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>

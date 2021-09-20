@@ -7,7 +7,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<title>Neural Re-rendering for Full-frame Video Stabilization - Supplementary Material</title>
+	<title>Hybrid Neural Fusion for Full-frame Video Stabilization - Supplementary Material</title>
 	<link href="css/foundation.css" rel="stylesheet" type="text/css" />
 	<link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
 	<!-- jQuery -->
@@ -26,14 +26,14 @@
 		<div class="row">
 			<div class="col-xs-12 text-center">
 				<br>
-				<h1>Neural Re-rendering for Full-frame Video Stabilization</h1>
+				<h1>Hybrid Neural Fusion for Full-frame Video Stabilization</h1>
 				<br>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-xs-12 text-left">
-				<a href="../../../index.html">
+				<a href="../main.html">
 					<button type="button" class="btn btn-link">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
 					</button>
@@ -46,11 +46,140 @@
 				<h3>Ablation study</h3>
 				<hr>
 				
+				<h4>Fusion space</h4>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/Zooming_10_ablation_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/3_ablation_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/Zooming_7_ablation_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/1_ablation_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/5_ablation_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Image-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Feature-space fusion</center></strong></h5>
+				  </div>
+				  <div class="large-4 columns">
+					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
+				  </div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<h4>Path adjustment</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/9_path_adjustment.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without path adjustment</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with path adjustment</center></strong></h5>
+				  </div>
+				</div>
+				
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/29_path_adjustment.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without path adjustment</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with path adjustment</center></strong></h5>
+				  </div>
+				</div>
+				
+				
+				
+				
+				
 				<h4>Residual detail transfer</h4>
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
 				  <div class="large-12 columns">
 					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/11_residual_detail_transfer_side_by_side.mp4" type="video/mp4"/>
+						<source src="../compressed_results/bonus_applications/11_residual_detail_transfer_side_by_side_pause_zoom.mp4" type="video/mp4"/>
 					</video>
 				  </div>
 				  <div class="large-6 columns">
@@ -64,7 +193,7 @@
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
 				  <div class="large-12 columns">
 					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/18_residual_detail_transfer_side_by_side.mp4" type="video/mp4"/>
+						<source src="../compressed_results/bonus_applications/18_residual_detail_transfer_side_by_side_pause_zoom.mp4" type="video/mp4"/>
 					</video>
 				  </div>
 				  <div class="large-6 columns">
@@ -75,58 +204,10 @@
 				  </div>
 				</div>
 				
-				<h4>Fusion space</h4>
-				<div class="row" style="margin-top: 2em" id='output_canvas'>
-				  <div class="large-12 columns">
-					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/3_ablation.mp4" type="video/mp4"/>
-					</video>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Image-space fusion</center></strong></h5>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Feature-space fusion</center></strong></h5>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
-				  </div>
-				</div>
 				
-				<div class="row" style="margin-top: 2em" id='output_canvas'>
-				  <div class="large-12 columns">
-					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/5_ablation.mp4" type="video/mp4"/>
-					</video>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Image-space fusion</center></strong></h5>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Feature-space fusion</center></strong></h5>
-				  </div>
-				  <div class="large-4 columns">
-					<h5><strong><center>Hybrid-space fusion</center></strong></h5>
-				  </div>
-				</div>
 			
 				<h3>FoV expansion</h3>
 				<hr>
-				
-				<h4>Zooming</h4>
-				<div class="row" style="margin-top: 2em" id='output_canvas'>
-				  <div class="large-12 columns">
-					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/Zooming_6_FOV_bf_side_by_side.mp4" type="video/mp4"/>
-					</video>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>Input unstable video</center></strong></h5>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>Ours + FoV expansion</center></strong></h5>
-				  </div>
-				</div>
 				
 				<h4>Parallax</h4>
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
@@ -158,32 +239,32 @@
 				  </div>
 				</div>
 				
+				<h4>Zooming</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/Zooming_6_FOV_bf_side_by_side.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Input unstable video</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>Ours + FoV expansion</center></strong></h5>
+				  </div>
+				</div>
+				
 			</div>	
 			
 			<div class="col-xs-12 text-left">
 				<h3>Blurry frames removal</h3>
 				<hr>
 				
-				<h4>Regular</h4>
-				<div class="row" style="margin-top: 2em" id='output_canvas'>
-				  <div class="large-12 columns">
-					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/21_frame_selection_side_by_side.mp4" type="video/mp4"/>
-					</video>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>without blurry frames removal</center></strong></h5>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>with blurry frames removal</center></strong></h5>
-				  </div>
-				</div>
-				
 				<h4>Running</h4>
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
 				  <div class="large-12 columns">
 					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/9_frame_selection_side_by_side.mp4" type="video/mp4"/>
+						<source src="../compressed_results/bonus_applications/9_frame_selection_side_by_side_pause_zoom.mp4" type="video/mp4"/>
 					</video>
 				  </div>
 				  <div class="large-6 columns">
@@ -194,20 +275,35 @@
 				  </div>
 				</div>
 				
+				<!-- <h4>Regular</h4>
+				<div class="row" style="margin-top: 2em" id='output_canvas'>
+				  <div class="large-12 columns">
+					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
+						<source src="../compressed_results/bonus_applications/21_frame_selection_side_by_side_pause_zoom.mp4" type="video/mp4"/>
+					</video>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>without blurry frames removal</center></strong></h5>
+				  </div>
+				  <div class="large-6 columns">
+					<h5><strong><center>with blurry frames removal</center></strong></h5>
+				  </div>
+				</div> -->
+				
 			</div>	
 			
 			<div class="col-xs-12 text-left">
-				<h3>Comparisons with video completion</h3>
+				<h3>Comparisons to learning-based blending (DeepBlending)</h3>
 				<hr>
 				
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
 				  <div class="large-12 columns">
 					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/0_video_completion_sode_by_side.mp4" type="video/mp4"/>
+						<source src="../compressed_results/bonus_applications/Zooming_0_deepblending.mp4" type="video/mp4"/>
 					</video>
 				  </div>
 				  <div class="large-6 columns">
-					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+					<h5><strong><center>DeepBlending</center></strong></h5>
 				  </div>
 				  <div class="large-6 columns">
 					<h5><strong><center>Ours</center></strong></h5>
@@ -217,25 +313,11 @@
 				<div class="row" style="margin-top: 2em" id='output_canvas'>
 				  <div class="large-12 columns">
 					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/1_video_completion_sode_by_side.mp4" type="video/mp4"/>
+						<source src="../compressed_results/bonus_applications/Zooming_18_deepblending.mp4" type="video/mp4"/>
 					</video>
 				  </div>
 				  <div class="large-6 columns">
-					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>Ours</center></strong></h5>
-				  </div>
-				</div>
-				
-				<div class="row" style="margin-top: 2em" id='output_canvas'>
-				  <div class="large-12 columns">
-					<video id="output_video" width="850" onended="this.currentTime = 0; this.play();" controls autoplay muted>
-						<source src="../compressed_results/bonus_applications/3_video_completion_sode_by_side_.mp4" type="video/mp4"/>
-					</video>
-				  </div>
-				  <div class="large-6 columns">
-					<h5><strong><center>[Yu and Ramamoorthi 2020] + [Gao et al.2020]</center></strong></h5>
+					<h5><strong><center>DeepBlending</center></strong></h5>
 				  </div>
 				  <div class="large-6 columns">
 					<h5><strong><center>Ours</center></strong></h5>
