@@ -1,4 +1,4 @@
-# [ICCV 2020] FuSta: Hybrid Neural Fusion for Full-frame Video Stabilization
+# [ICCV 2021] FuSta: Hybrid Neural Fusion for Full-frame Video Stabilization
 ### [Project Page](https://alex04072000.github.io/FuSta/) | [Video](https://www.youtube.com/watch?v=KO3sULs4hso) | [Paper](https://arxiv.org/abs/2102.06205) | [Google Colab](https://colab.research.google.com/drive/1l-fUzyM38KJMZyKMBWw_vu7ZUyDwgdYH?usp=sharing)
 
 <img src='./teaser.png' width=1000>
